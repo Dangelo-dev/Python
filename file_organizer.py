@@ -3,7 +3,7 @@ from tkinter.filedialog import askdirectory
 
 directory = askdirectory(title="Select a directory")
 
-list_arquives = os.listdir(directory)
+list_files = os.listdir(directory)
 
 locals = {
     "images": [".png", ".jpg", ".hev"],
@@ -15,7 +15,7 @@ locals = {
     "compact": [".zip", ".rar"]
 }
 
-for arquive in list_arquives:
+for arquive in list_files:
     print(arquive)
     name, extension = os.path.splitext(f"{directory}/{arquive}")
     for folder in locals:
